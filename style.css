@@ -1,0 +1,465 @@
+/* fonts 
+---------
+font-family: 'Lora', serif;
+font-family: 'Ubuntu', sans-serif;
+*/
+
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ======================
+Typography
+========================*/
+
+h1, 
+h2, 
+h3 {
+  font-family: 'Lora', serif;
+  font-weight: 400;
+  color: #143774;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+a {
+  color: #1792d2;
+}
+
+a:hover,
+a:focus {
+  color: #143774;
+  cursor: pointer;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.site-subtitle {
+  font-weight: 700;
+  color: #1792d2;
+  font-size: .75rem;
+  margin: 0;
+}
+
+.article-title {
+  font-size: 1.5rem;
+}
+
+.article-read-more,
+.article-info {
+  font-size: .875rem;
+}
+
+.article-read-more {
+  text-decoration: none; 
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.article-read-more:hover,
+.article-read-more:focus {
+  color: #143774;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+aside {
+  font-family: 'Ubuntu', sans-serif;
+  color: #143774;
+  font-weight: 400;
+}
+
+.widget-title {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.5em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.widget-body {
+  font-size: .875rem;
+  line-height: 1.5em;
+  font-weight: 300;
+}
+
+.widget-recent-post-title {
+  font-size: 1.125rem;
+  line-height: 1.5em;
+}
+
+footer {
+  color: white;
+  font-size: 1.125rem;
+}
+
+footer .copyright {
+  font-weight: 300;
+}
+
+.about-me-title {
+  font-size: 1.5rem;
+}
+
+.about-me-article h3 {
+  color: #1792D2;
+  font-weight: 700;
+}
+
+.about-me-article p {
+  letter-spacing: .5px;
+  line-height: 1.7em;
+}
+
+/*========================
+Layout General
+=========================*/
+h1 {
+  margin-bottom: .2em;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.container-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column; 
+}
+
+header {
+  background-color: #F8f8f8;
+  padding: 2em 0;
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+ @media (min-width: 675px){
+  h1 {
+    min-width: 308px;
+  }
+
+  .container-flex {
+    flex-direction: row;
+  }
+
+  main {
+    width: 70%;
+  }
+  
+  aside {
+    width: 25%;
+    min-width: 180px;
+    margin-left: 1em;
+  }
+
+  header{
+    text-align: left;
+  }
+} 
+
+
+
+/*=================
+Layout - Navigation
+===================*/
+
+nav ul{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li{
+  margin-left: 2em;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #707070;
+  cursor: pointer;
+  font-weight: 700;
+  padding: .25em 0;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #1792d2;
+}
+
+.current-page {
+  border-bottom: 1px solid #707070;
+}
+
+.current-page:hover,
+.current-page:focus {
+  color: #707070;
+}
+
+@media (max-width: 675px){
+  nav ul {
+    flex-direction: column;
+  }
+  nav li{
+    margin: .5em 0;
+  }
+}
+
+
+
+/* =====================
+Layout- Article Featured
+====================== */
+
+
+.article-featured {
+  border-bottom: #707070 solid 1px;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-featured .article-featured-image {
+  order: 1;
+}
+
+.article-featured .article-featured-credit {
+  order: 2;
+}
+
+.article-featured .article-info {
+  order: 3;
+  margin: 1em 0 2em 0;
+}
+
+.article-featured .article-title {
+  order: 4;
+}
+
+.article-featured .article-body {
+  order: 5;
+  margin: 0 0 1em 0;
+}
+
+.article-featured .article-read-more {
+  order: 6;
+}
+
+
+/*=====================
+Layout- Article Recent
+======================*/
+
+
+.article-recent {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+
+.article-recent-secondary { 
+  order: 1;
+}
+
+.article-recent-main {
+  order: 2;
+}
+/* negative margins - bad practice, but sometimes it works. here's an example
+ @media (min-width: 550px) {
+  .article-recent-main {
+    margin-top: -2.75em; 
+  }
+  .article-info {
+    text-align: right;
+  }
+} */
+
+.article-image {
+  width: 100%; 
+  min-height: 250px;
+  object-fit: cover;
+  object-position:right;
+}
+
+.article-recent-cat {
+  object-fit: cover;
+  object-position: center;
+}
+
+.article-title {
+  display: block;
+  margin-bottom: 1em;  
+}
+
+.article-body {
+  line-height: 1.5em;
+
+}
+
+.article-read-more {
+  display: block;  
+  letter-spacing: .2em;
+  font-weight: 700;
+  margin: 1em 0;
+}
+
+@media (min-width:675px) {
+  .article-recent {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .article-recent-main {
+    width: 68%;
+  }
+
+  .article-recent-secondary {
+    width: 30%;
+  }
+}
+
+
+/*===============
+Layout Aside
+===============*/
+
+.sidebar-widget {
+  padding: 1em;
+  border: 1em solid #e9e6e6;
+  margin-bottom: 5em;
+}
+
+.widget-about-title {
+  display: none;
+}
+
+.widget-author-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.widget-recent-post {
+  display: flex;
+  flex-direction: column;
+}
+
+.widget-title {
+  margin-bottom: 3em;
+}
+
+.widget-body {
+  margin: 1.2em 0 0 0;
+}
+
+.widget-image {
+  order: 1;
+}
+
+.widget-recent-post-title {
+  order: 2;
+  margin: 1.5em 0;
+  padding-bottom: 1.5em;
+  border-bottom: #e9e6e6 solid 1px;
+}
+
+.widget-recent-post:last-of-type .widget-recent-post-title {
+  border: none;
+  margin-bottom: 0;
+  padding-bottom: 1em;
+}
+
+@media (min-width: 675px) {
+  .widget-title {
+    display: block;
+  }
+  .widget-author-image {
+    height: 130px;
+  }
+  .widget-title {
+    margin-bottom: 1em;
+  }
+  .widget-recent-post:last-of-type .widget-recent-post-title {
+    padding-bottom: 0;
+  }
+  .sidebar-widget {
+    margin-bottom: 2em;
+  }
+}
+
+
+/*===============
+Layout Footer
+===============*/
+
+footer {
+  background-color: #143774;
+  width: 100%;
+  height: 7em;
+  text-align: center;
+  padding-top: 4.3em;
+}
+
+footer p {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+}
+
+footer .tag {
+  margin-bottom: .4em;
+}
+
+@media (min-width: 675px) {
+  footer {
+    height: 4em;
+    padding-top: 1em;
+  }
+}
+
+/*==================
+Layout About Me Page
+==================*/
+
+.about-me-title {
+  margin: 2em 0 1em 0;
+}
+
+.about-me-article h3 {
+  margin: 1.5em 0;
+}
+
+.about-me-article-image {
+  width: 100%;
+  max-height: 470px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.about-me-article p:last-of-type {
+  margin-bottom: 6em;
+}
